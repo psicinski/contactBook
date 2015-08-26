@@ -95,6 +95,24 @@ return [
     'charset' => 'utf8',
 ];
 ```
+the Database schema should have database contactbook and execute the following sql in phpadmin:
+```
+CREATE TABLE IF NOT EXISTS `contact` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(150) NOT NULL,
+  `lastname` varchar(150) NOT NULL,
+  `phone` varchar(11) NOT NULL,
+  `mail` text NOT NULL,
+  `address` text NOT NULL,
+  `city` text NOT NULL,
+  `zip` text NOT NULL,
+  `isFriend` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+```
+
+
 
 **NOTE:** Yii won't create the database for you, this has to be done manually before you can access it.
 
